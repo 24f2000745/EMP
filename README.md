@@ -229,10 +229,3 @@ python -m py_compile app.py tasks.py celery_app.py cache_store.py
 
 `/api/health/details` reports whether Redis is reachable. For Celery jobs, verify that the worker and Beat terminals remain running and that the task appears in the worker log.
 
-## Notes / limitations to review before final submission
-
-- Email delivery requires your own SMTP account and credentials; no third-party credentials are bundled.
-- Redis/Celery features require a running Redis service and separately started worker/Beat processes.
-- Vue and Bootstrap are loaded from CDN, so the first page load needs internet access.
-- This is a local academic project build. Before any production deployment, add CSRF token protection, HTTPS, a strong secret, hardened cookie settings, rate limiting, backup/restore, and production-grade logging.
-- Review the code and be prepared to explain the API routes, SQLite transactions, role decorators, Redis cache adapter and Celery tasks during viva.
